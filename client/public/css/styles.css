@@ -91,10 +91,15 @@ body {
 .dashboard {
   z-index: 60;
   position: absolute; }
+  .dashboard h1 {
+    font-family: MyWebFont;
+    letter-spacing: 2px;
+    text-align: center;
+    color: darkslategrey; }
   .dashboard ul {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap; }
     .dashboard ul li {
       list-style: none;
@@ -140,6 +145,18 @@ body {
 .kidList {
   z-index: 60;
   position: absolute; }
+  .kidList li {
+    list-style: none;
+    display: inline-block;
+    padding: 1em;
+    margin: 1em;
+    background-color: #e6eef1;
+    border-radius: 0.2em;
+    text-align: center;
+    font-size: 2em;
+    color: darkblue; }
+  .kidList .imgKid {
+    max-width: 100px; }
 
 form {
   z-index: 60;
@@ -151,3 +168,6 @@ form {
   padding-right: 3em; }
   form .form-group {
     margin: 2em; }
+
+.footer {
+  padding: 0.5em; }

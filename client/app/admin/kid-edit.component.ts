@@ -71,7 +71,7 @@ export class KidEditComponent implements OnInit {
               .then(() => {
                   this.router.navigate(['/kid']);
               });
-      }
+      }      
   }
 
   prepareForm() {

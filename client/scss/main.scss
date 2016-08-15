@@ -95,10 +95,20 @@ body {
   z-index: 60;
   position: absolute;
 
+  h1 {
+    font-family: MyWebFont;
+    letter-spacing: 2px;
+    text-align: center;
+    color: darkslategrey;
+    
+    
+    
+  }
+
   ul {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
 
     li {
@@ -161,6 +171,22 @@ body {
 .kidList {
     z-index: 60;
     position: absolute;
+    li {
+      list-style: none;
+      display:inline-block;
+      padding:1em;
+      margin:1em;
+      background-color:#e6eef1;
+      border-radius: 0.2em;
+      text-align: center;
+      font-size: 2em;
+      color:darkblue;
+    }
+
+
+    .imgKid {
+      max-width: 100px;
+    }
 }
   form {
     z-index: 60;
@@ -173,4 +199,9 @@ body {
     .form-group {
       margin: 2em;
     }
+  }
+
+  .footer {
+    padding: 0.5em
+    
   }

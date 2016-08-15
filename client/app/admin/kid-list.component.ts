@@ -15,6 +15,10 @@ import {KidThumbComponent} from './kid-thumb.component';
   template: `
     <section class="kidList">
 
+      <a routerLink="/kidsdashboard" >
+        <h4> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>  back to the dashboard </h4>
+      </a>
+
       <kid-filter (filterChange)="filter = $event"></kid-filter>
       <a routerLink="/kid/edit" class="btn btn-primary">+ Add Kid</a>
 
@@ -46,7 +50,7 @@ export class KidListComponent implements OnInit {
       this.kids = kids;
       console.log('kids', this.kids);
     });
-    
+
     prmKids.catch(err => {
       alert('Sorry,cannot load the kids, try again later');
       console.log('Cought an error in kidList', err);

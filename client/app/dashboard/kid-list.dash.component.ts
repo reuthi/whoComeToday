@@ -13,8 +13,17 @@ import {KidThumbDashComponent} from './kid-thumb.dash.component';
   template: `
 
     <section class="dashboard">
+      <h1> WHO IS HERE? </h1>
+      <ul>
+          <li class="scaling" *ngFor="let kid of kids" [class.is-here]="kid.isHere" [class.not-here]="!kid.isHere">
+            <div class="isHereMark" *ngIf="kid.isHere && kidClicked">
+              <img src="public/img/goodJob.png">
+            </div>
+            <kid-thumb-dash [kid]="kid" (click)="kidDashService.sendkidReport$.next(kid.id)"></kid-thumb-dash>
+          </li>
+      </ul>
       <div *ngIf="isAfterDeadLine" class="tblContacts"> 
-        <h4> CALL THE PARENTS: </h4>
+        <h4> Call the parents: </h4>
         <table class="table table-hover">
           <tr>
             <th>Name</th>
@@ -28,16 +37,10 @@ import {KidThumbDashComponent} from './kid-thumb.dash.component';
           </tr>
         </table>
       </div> 
-      <ul>
-          <li class="scaling" *ngFor="let kid of kids" [class.is-here]="kid.isHere" [class.not-here]="!kid.isHere">
-            <div class="isHereMark" *ngIf="kid.isHere && kidClicked">
-              <img src="public/img/goodJob.png">
-            </div>
-            <kid-thumb-dash [kid]="kid" (click)="kidDashService.sendkidReport$.next(kid.id)"></kid-thumb-dash>
-          </li>
-      </ul>
-      <footer>
-          <a routerLink="/kid" >admin page</a>
+      <footer class="footer navbar-fixed-bottom">
+          <a routerLink="/kid" >
+            <h4> admin page </h4>
+          </a>
       </footer>
     </section>
   `
