@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Injectable()
 export class LoginService {
     
     private baseUrl = 'http://localhost:3003/login';
 
-    constructor(private http: Http) { }
+    constructor(private http: Http,
+                private route: ActivatedRoute,
+                private router: Router) { }
 
      public get url() {
       return this.baseUrl;
@@ -22,8 +26,10 @@ export class LoginService {
 
          prmUser = response.toPromise()
              .then((res: any) => {
-                 const jsonUser = res.json();
-                 console.log('jsonUser', jsonUser)
+                 const jsonUser = res;
+                 console.log('User Connected!')
+                 this.router.navigate(['/kidsdashboard']);
+
                  //   return new KidModel(jsonKid.name, jsonKid.birthdate, 
                  //                       jsonKid.id, jsonKid.imgUrl,
                  //                       jsonKid.contacts);

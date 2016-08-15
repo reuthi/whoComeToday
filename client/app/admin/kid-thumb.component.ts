@@ -23,7 +23,6 @@ export class KidThumbComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { 
-    // console.log('kid', this.kid);
     
   }
 

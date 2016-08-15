@@ -47,6 +47,5 @@ export class LoginComponent implements OnInit {
     save(){
         console.log(this.loginForm.value) 
         this.loginService.save(this.loginForm.value)
-
     }
 }

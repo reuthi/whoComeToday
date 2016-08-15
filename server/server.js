@@ -198,6 +198,7 @@ app.put('/data/:objType/:id', function (req, res) {
 // Basic Login/Logout/Protected assets
 app.post('/login', function (req, res) {
     dbConnect().then((db) => {
+		console.log('req.body', req.body)
         db.collection('user').findOne({ username: req.body.username, pass: req.body.pass }, function (err, user) {
             if (user) {
                 cl('Login Succesful');

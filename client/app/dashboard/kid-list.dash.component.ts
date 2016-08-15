@@ -11,6 +11,7 @@ import {KidThumbDashComponent} from './kid-thumb.dash.component';
   moduleId: module.id,
   directives: [KidThumbDashComponent],
   template: `
+
     <section class="dashboard">
       <div *ngIf="isAfterDeadLine" class="tblContacts"> 
         <h4> CALL THE PARENTS: </h4>
@@ -35,6 +36,9 @@ import {KidThumbDashComponent} from './kid-thumb.dash.component';
             <kid-thumb-dash [kid]="kid" (click)="kidDashService.sendkidReport$.next(kid.id)"></kid-thumb-dash>
           </li>
       </ul>
+      <footer>
+          <a routerLink="/kid" >admin page</a>
+      </footer>
     </section>
   `
 })

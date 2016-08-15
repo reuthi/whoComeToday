@@ -13,7 +13,7 @@ import { RouterConfig, ROUTER_DIRECTIVES, provideRouter } from '@angular/router'
 
 
 const routes: RouterConfig = [
-  { path: '', component: AppComponent },
+  { path: '', component: LoginComponent },
   { path: 'kidsdashboard', component: KidListDashComponent },
   { path: 'login', component: LoginComponent },      
   { path: 'kid', component: KidListComponent },

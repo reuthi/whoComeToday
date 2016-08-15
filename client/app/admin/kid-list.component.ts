@@ -47,12 +47,12 @@ export class KidListComponent implements OnInit {
       console.log('kids', this.kids);
     });
     
-
     prmKids.catch(err => {
       alert('Sorry,cannot load the kids, try again later');
       console.log('Cought an error in kidList', err);
     });
   }
+
   removeKid(kidId : string) {
     this.kidService.remove(kidId)
       .then((kids : KidModel[])=>{
