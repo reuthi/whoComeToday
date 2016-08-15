@@ -1,0 +1,50 @@
+<div class="kidEditComp">
+<form [formGroup]="frmKid" (submit)="save()" >
+  <div class="form-group">
+    <label>Name:</label>
+    <input type="text" class="form-control" formControlName="name" autofocus>
+    <p class="text-danger" *ngIf="frmKid.controls.name.dirty && frmKid.controls.name.errors?.required">Kid has no name</p>
+    <p class="text-danger" *ngIf="frmKid.controls.name.dirty && frmKid.controls.name.errors?.minlength">kid's name too short</p>
+    <p class="text-danger" *ngIf="frmKid.controls.name.dirty && frmKid.controls.name.errors?.maxlength">kid's name too long</p>
+  </div>
+
+  <!--<div class="form-group">
+    <label>Power:</label>
+    <input type="number" class="form-control" formControlName="power">
+    <p class="text-danger" *ngIf="frmKid.controls.power.dirty && frmKid.controls.power?.errors">Kid needs Power</p>
+  </div>-->
+  <div class="form-group">
+    <label>Birthdate:</label>
+    <input type="date" class="form-control" formControlName="birthdate">
+    <p class="text-danger" *ngIf="frmKid.controls.birthdate.dirty && frmKid.controls.birthdate?.errors">Kid needs Birthdate</p>
+  </div>
+
+  <fieldset formGroupName="contacts">
+    <label>Contacts:</label>  
+    <div class="form-group">
+      <label>Title:</label>
+      <input type="text" class="form-control" formControlName="title">
+      <p class="text-danger" *ngIf="frmKid.controls.contacts.controls.title.dirty && frmKid.controls.contacts.controls.title.errors">This field is required!</p>
+    </div>
+
+    <div class="form-group">
+      <label>Phone:</label>
+      <input type="text" class="form-control" formControlName="phone">
+      <p class="text-danger" *ngIf="frmKid.controls.contacts.controls.phone.dirty && frmKid.controls.contacts.controls.phone.errors">This field is required!</p>
+    </div>
+  </fieldset>
+  
+    <div class="form-group">
+      <input type="file" ng2FileSelect [uploader]="uploader" />
+    </div>
+    <div class="form-group">   
+      <button type="submit" [disabled]="!frmKid.valid" class="btn btn-default">Submit</button>
+    </div>
+</form>
+</div>
+<!--<pre>
+{{monsterToEdit | json}}
+
+</pre>-->
+
+<!--<upload-demo></upload-demo>-->
