@@ -5,9 +5,24 @@
 
 *{ margin: 0; padding: 0;}
 
-body {
+.bodyWrapper {
 	overflow-y: scroll;
   overflow-x: hidden;
+}
+
+ 
+@media screen and (max-width: 375px) {
+    .bodyWrapper {
+        // overflow-x: hidden!important;
+        // overflow-y: hidden!important;
+        
+    }
+}
+@media screen and (max-width: 768px) {
+    .bodyWrapper {
+        // overflow-x: hidden!important;
+        // overflow-y: hidden!important;        
+    }
 }
 
 #clouds{
@@ -40,6 +55,8 @@ body {
 
 .x1 {
 	-webkit-animation: moveclouds 15s linear infinite;
+  	-moz-animation: moveclouds 15s linear infinite;
+	-o-animation: moveclouds 15s linear infinite;
 }
 
 .x2 {
@@ -47,6 +64,8 @@ body {
 	transform: scale(0.6);
 	opacity: 0.6; 
   -webkit-animation: moveclouds 25s linear infinite;
+  	-moz-animation: moveclouds 25s linear infinite;
+	-o-animation: moveclouds 25s linear infinite;
 }
 
 .x3 {
@@ -54,6 +73,8 @@ body {
 	transform: scale(0.8);
 	opacity: 0.8; 
 	-webkit-animation: moveclouds 20s linear infinite;
+  	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
 }
 
 .x4 {
@@ -61,6 +82,8 @@ body {
 	transform: scale(0.75);
 	opacity: 0.75; 
 	-webkit-animation: moveclouds 18s linear infinite;
+  	-moz-animation: moveclouds 18s linear infinite;
+	-o-animation: moveclouds 18s linear infinite;
 }
 
 .x5 {
@@ -68,9 +91,20 @@ body {
 	transform: scale(0.8);
 	opacity: 0.8; 
 	-webkit-animation: moveclouds 20s linear infinite;
+  	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
 	}
 
 @-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
 	0% {margin-left: 1000px;}
 	100% {margin-left: -1000px;}
 }

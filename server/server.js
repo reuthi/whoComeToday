@@ -78,7 +78,9 @@ app.get('/data/:objType', function (req, res) {
 	const objType = req.params.objType;
 	dbConnect().then((db) => {
 		const collection = db.collection(objType);
-
+		console.log('objType', objType);		
+		// console.log('collection', collection);
+		
 		collection.find({}).toArray((err, objs) => {
 			if (err) {
 				cl('Cannot get you a list of ', err)
@@ -195,12 +197,15 @@ app.put('/data/:objType/:id', function (req, res) {
 	});
 });
 
+
 // Basic Login/Logout/Protected assets
-app.post('/login', function (req, res) {
+app.post('/login/:objType', function (req, res) {
     dbConnect().then((db) => {
+		console.log(db.collection('user'))
 		console.log('req.body', req.body)
         db.collection('user').findOne({ username: req.body.username, pass: req.body.pass }, function (err, user) {
-            if (user) {
+			cl('user', user);            
+			if (user) {
                 cl('Login Succesful');
                 req.session.user = user;  //refresh the session value
                 res.end('Login Succesful');
@@ -209,6 +214,7 @@ app.post('/login', function (req, res) {
                 req.session.user = null;
                 res.end('Login NOT Succesful');
             }
+			cl('req.session.user', req.session.user);
         });
     });
 });

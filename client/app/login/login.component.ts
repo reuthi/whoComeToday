@@ -45,7 +45,8 @@ export class LoginComponent implements OnInit {
     }
 
     save(){
-        console.log(this.loginForm.value) 
+        console.log('this.loginForm.value: ', this.loginForm.value) 
         this.loginService.save(this.loginForm.value)
+    //    console.log(classFromUser)
     }
 }

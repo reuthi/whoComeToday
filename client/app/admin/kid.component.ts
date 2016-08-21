@@ -11,7 +11,6 @@ import {KidModel} from './kid.model';
     <section *ngIf="kid">
       <h2>Kid {{kid.name}}</h2>
       <img [src]="kid.imgUrl" >
-
     </section>
   `
 })

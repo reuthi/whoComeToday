@@ -37,7 +37,7 @@ import {KidThumbDashComponent} from './kid-thumb.dash.component';
           </tr>
         </table>
       </div> 
-      <footer class="footer navbar-fixed-bottom">
+      <footer class="footer navbar">
           <a routerLink="/kid" >
             <h4> admin page </h4>
           </a>

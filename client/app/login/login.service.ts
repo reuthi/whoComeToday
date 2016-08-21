@@ -2,11 +2,14 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import {KidModel} from '../admin/kid.model'; 
+
+
 
 @Injectable()
 export class LoginService {
     
-    private baseUrl = 'http://localhost:3003/login';
+    private baseUrl = 'http://localhost:3003/login/user/';
 
     constructor(private http: Http,
                 private route: ActivatedRoute,
@@ -22,18 +25,28 @@ export class LoginService {
          let prmUser: any; // promise to kidModel?
 
          const url = this.baseUrl;
+         
          response = this.http.post(url, userData);
 
          prmUser = response.toPromise()
              .then((res: any) => {
-                 const jsonUser = res;
-                 console.log('User Connected!')
-                 this.router.navigate(['/kidsdashboard']);
+                 const resJson = res;
+                console.log(resJson)
 
-                 //   return new KidModel(jsonKid.name, jsonKid.birthdate, 
-                 //                       jsonKid.id, jsonKid.imgUrl,
-                 //                       jsonKid.contacts);
+                // ****TODO: fix the bug of the connection - even if not succesful - navigate to kidsDashboard
+                // ****this navigate anyway:
+                 this.router.navigate(['/kidsdashboard']);
+                
+                // const jsonKids = resJson.class; 
+                //  return jsonKids.map((jsonKid: any) => {
+                //      let jsonKidContacts = JSON.parse(jsonKid.contacts);
+                //     console.log('jsonKids', jsonKids)
+                //      return new KidModel(jsonKid.name, jsonKid.birthdate,
+                //          jsonKid._id, jsonKid.imgUrl,
+                //          jsonKidContacts)
+                //  })
              });
+
 
          prmUser.catch(err => {
              console.log('LoginService::save - Problem talking to server', err);

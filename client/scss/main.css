@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url("../../public/font/KidZone.ttf"); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.bodyWrapper {
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+#clouds {
+  z-index: 0;
+  background: #c9dbe9;
+  background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%); }
+
+.cloud {
+  width: 200px;
+  height: 60px;
+  background: #fff;
+  border-radius: 200px;
+  position: relative; }
+
+.cloud:before, .cloud:after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  border-radius: 100px;
+  transform: rotate(30deg); }
+
+.cloud:after {
+  width: 120px;
+  height: 120px;
+  top: -55px;
+  left: auto;
+  right: 15px; }
+
+.x1 {
+  -webkit-animation: moveclouds 15s linear infinite;
+  -moz-animation: moveclouds 15s linear infinite;
+  -o-animation: moveclouds 15s linear infinite; }
+
+.x2 {
+  left: 200px;
+  transform: scale(0.6);
+  opacity: 0.6;
+  -webkit-animation: moveclouds 25s linear infinite;
+  -moz-animation: moveclouds 25s linear infinite;
+  -o-animation: moveclouds 25s linear infinite; }
+
+.x3 {
+  left: -250px;
+  top: -200px;
+  transform: scale(0.8);
+  opacity: 0.8;
+  -webkit-animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite; }
+
+.x4 {
+  left: 470px;
+  top: -250px;
+  transform: scale(0.75);
+  opacity: 0.75;
+  -webkit-animation: moveclouds 18s linear infinite;
+  -moz-animation: moveclouds 18s linear infinite;
+  -o-animation: moveclouds 18s linear infinite; }
+
+.x5 {
+  left: -150px;
+  top: -150px;
+  transform: scale(0.8);
+  opacity: 0.8;
+  -webkit-animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite; }
+
+@-webkit-keyframes moveclouds {
+  0% {
+    margin-left: 1000px; }
+  100% {
+    margin-left: -1000px; } }
+
+@-moz-keyframes moveclouds {
+  0% {
+    margin-left: 1000px; }
+  100% {
+    margin-left: -1000px; } }
+
+@-o-keyframes moveclouds {
+  0% {
+    margin-left: 1000px; }
+  100% {
+    margin-left: -1000px; } }
+
+.tblContacts {
+  border: 0.5px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  margin-top: 3em;
+  padding: 2em; }
+
+.tblContacts h4 {
+  font-family: MyWebFont; }
+
+.tblContacts tr {
+  font-size: 0.9em; }
+
+.dashboard {
+  z-index: 60;
+  position: absolute; }
+
+.dashboard h1 {
+  font-family: MyWebFont;
+  letter-spacing: 2px;
+  text-align: center;
+  color: darkslategrey; }
+
+.dashboard ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.dashboard ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0.5em;
+  margin: 0.5em;
+  background-color: transparent;
+  text-align: center;
+  font-size: 1.5em;
+  color: dimgrey;
+  border: 5px solid orange;
+  border-radius: 5%;
+  font-family: MyWebFont; }
+
+.dashboard .isHereMark {
+  background-color: rgba(35, 39, 45, 0.65);
+  position: absolute; }
+
+.dashboard .isHereMark img {
+  opacity: 0.8;
+  width: 180px;
+  height: 220px; }
+
+.dashboard .imgKid {
+  width: 180px;
+  height: 180px; }
+
+.dashboard .is-here {
+  border: 5px solid green; }
+
+.dashboard .not-here {
+  border: 5px solid red; }
+
+.dashboard .scaling {
+  float: left;
+  -webkit-animation-name: scalex;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out; }
+
+@-webkit-keyframes scalex {
+  from {
+    -webkit-transform: scale(0.9); }
+  65% {
+    -webkit-transform: scale(0.95); }
+  to {
+    -webkit-transform: scale(0.9); } }
+
+.kidList {
+  z-index: 60;
+  position: absolute; }
+
+.kidList li {
+  list-style: none;
+  display: inline-block;
+  padding: 1em;
+  margin: 1em;
+  background-color: #e6eef1;
+  border-radius: 0.2em;
+  text-align: center;
+  font-size: 2em;
+  color: darkblue; }
+
+.kidList .imgKid {
+  max-width: 100px; }
+
+form {
+  z-index: 60;
+  position: absolute;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding-left: 3em;
+  padding-right: 3em; }
+
+form .form-group {
+  margin: 2em; }
+
+.footer {
+  padding: 0.5em; }

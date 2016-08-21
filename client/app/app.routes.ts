@@ -15,7 +15,7 @@ import { RouterConfig, ROUTER_DIRECTIVES, provideRouter } from '@angular/router'
 const routes: RouterConfig = [
   { path: '', component: LoginComponent },
   { path: 'kidsdashboard', component: KidListDashComponent },
-  { path: 'login', component: LoginComponent },      
+  { path: 'login/:user', component: LoginComponent },      
   { path: 'kid', component: KidListComponent },
   { path: 'kid/edit', component: KidEditComponent },
   { path: 'kid/edit/:id', component: KidEditComponent },
