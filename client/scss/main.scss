@@ -13,15 +13,15 @@
  
 @media screen and (max-width: 375px) {
     .bodyWrapper {
-        // overflow-x: hidden!important;
-        // overflow-y: hidden!important;
+        overflow-x: hidden!important;
+        overflow-y: hidden!important;
         
     }
 }
 @media screen and (max-width: 768px) {
     .bodyWrapper {
-        // overflow-x: hidden!important;
-        // overflow-y: hidden!important;        
+        overflow-x: hidden!important;
+        overflow-y: hidden!important;        
     }
 }
 
@@ -54,60 +54,60 @@
 }
 
 .x1 {
-	-webkit-animation: moveclouds 15s linear infinite;
-  	-moz-animation: moveclouds 15s linear infinite;
-	-o-animation: moveclouds 15s linear infinite;
+	// -webkit-animation: moveclouds 15s linear infinite;
+  // 	-moz-animation: moveclouds 15s linear infinite;
+	// -o-animation: moveclouds 15s linear infinite;
 }
 
 .x2 {
 	left: 200px;
 	transform: scale(0.6);
 	opacity: 0.6; 
-  -webkit-animation: moveclouds 25s linear infinite;
-  	-moz-animation: moveclouds 25s linear infinite;
-	-o-animation: moveclouds 25s linear infinite;
+  // -webkit-animation: moveclouds 25s linear infinite;
+  // 	-moz-animation: moveclouds 25s linear infinite;
+	// -o-animation: moveclouds 25s linear infinite;
 }
 
 .x3 {
 	left: -250px; top: -200px;
 	transform: scale(0.8);
 	opacity: 0.8; 
-	-webkit-animation: moveclouds 20s linear infinite;
-  	-moz-animation: moveclouds 20s linear infinite;
-	-o-animation: moveclouds 20s linear infinite;
+	// -webkit-animation: moveclouds 20s linear infinite;
+  // 	-moz-animation: moveclouds 20s linear infinite;
+	// -o-animation: moveclouds 20s linear infinite;
 }
 
 .x4 {
 	left: 470px; top: -250px;
 	transform: scale(0.75);
 	opacity: 0.75; 
-	-webkit-animation: moveclouds 18s linear infinite;
-  	-moz-animation: moveclouds 18s linear infinite;
-	-o-animation: moveclouds 18s linear infinite;
+	// -webkit-animation: moveclouds 18s linear infinite;
+  // 	-moz-animation: moveclouds 18s linear infinite;
+	// -o-animation: moveclouds 18s linear infinite;
 }
 
 .x5 {
 	left: -150px; top: -150px;
 	transform: scale(0.8);
 	opacity: 0.8; 
-	-webkit-animation: moveclouds 20s linear infinite;
-  	-moz-animation: moveclouds 20s linear infinite;
-	-o-animation: moveclouds 20s linear infinite;
+	// -webkit-animation: moveclouds 20s linear infinite;
+  // 	-moz-animation: moveclouds 20s linear infinite;
+	// -o-animation: moveclouds 20s linear infinite;
 	}
 
-@-webkit-keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
-}
+// @-webkit-keyframes moveclouds {
+// 	0% {margin-left: 1000px;}
+// 	100% {margin-left: -1000px;}
+// }
 
-@-moz-keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
-}
-@-o-keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
-}
+// @-moz-keyframes moveclouds {
+// 	0% {margin-left: 1000px;}
+// 	100% {margin-left: -1000px;}
+// }
+// @-o-keyframes moveclouds {
+// 	0% {margin-left: 1000px;}
+// 	100% {margin-left: -1000px;}
+// }
 
 .tblContacts{
   border: 0.5px solid black;
@@ -183,22 +183,22 @@
   }
 
   .not-here {
-    border: 5px solid red;
+    border: 5px solid black;
   }
   
-  .scaling{
-    float: left;
-    -webkit-animation-name: scalex;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count:infinite;
-    -webkit-animation-timing-function:ease-in-out;
+  // .scaling{
+  //   float: left;
+  //   -webkit-animation-name: scalex;
+  //   -webkit-animation-duration: 5s;
+  //   -webkit-animation-iteration-count:infinite;
+  //   -webkit-animation-timing-function:ease-in-out;
 
-      @-webkit-keyframes scalex{
-          from {-webkit-transform: scale(0.9);}
-          65% {-webkit-transform: scale(0.95);}
-          to {-webkit-transform: scale(0.9);}    
-      }
-  }
+  //     @-webkit-keyframes scalex{
+  //         from {-webkit-transform: scale(0.9);}
+  //         65% {-webkit-transform: scale(0.95);}
+  //         to {-webkit-transform: scale(0.9);}    
+  //     }
+  // }
     
 }
 

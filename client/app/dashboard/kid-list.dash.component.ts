@@ -24,18 +24,20 @@ import {KidThumbDashComponent} from './kid-thumb.dash.component';
       </ul>
       <div *ngIf="isAfterDeadLine" class="tblContacts"> 
         <h4> Call the parents: </h4>
-        <table class="table table-hover">
-          <tr>
-            <th>Name</th>
-            <th>Contact</th>
-            <th>Phone</th>
-          </tr>
-          <tr *ngFor="let kid of kidsNotHere"> 
-            <td>{{kid.name}} </td>
-            <td>{{kid.contacts.title}} </td>
-            <td>{{kid.contacts.phone}} </td>
-          </tr>
-        </table>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <tr>
+              <th>Name</th>
+              <th>Contact</th>
+              <th>Phone</th>
+            </tr>
+            <tr *ngFor="let kid of kidsNotHere"> 
+              <td>{{kid.name}} </td>
+              <td>{{kid.contacts.title}} </td>
+              <td>{{kid.contacts.phone}} </td>
+            </tr>
+          </table>
+        </div>
       </div> 
       <footer class="footer navbar">
           <a routerLink="/kid" >

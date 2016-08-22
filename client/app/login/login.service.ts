@@ -33,8 +33,10 @@ export class LoginService {
                  const resJson = res;
                 console.log(resJson)
 
-                // ****TODO: fix the bug of the connection - even if not succesful - navigate to kidsDashboard
-                // ****this navigate anyway:
+                // **** TODO: fix the bug of the connection - even if not succesful - navigate to kidsDashboard
+                // **** this navigate anyway:
+                
+                //  if (resJson.username) 
                  this.router.navigate(['/kidsdashboard']);
                 
                 // const jsonKids = resJson.class; 

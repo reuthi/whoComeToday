@@ -79,7 +79,6 @@ app.get('/data/:objType', function (req, res) {
 	dbConnect().then((db) => {
 		const collection = db.collection(objType);
 		console.log('objType', objType);		
-		// console.log('collection', collection);
 		
 		collection.find({}).toArray((err, objs) => {
 			if (err) {
@@ -101,7 +100,6 @@ app.get('/data/:objType/:id', function (req, res) {
 	cl(`Getting you an ${objType} with id: ${objId}`);
 	dbConnect().then((db) => {
 		const collection = db.collection(objType);
-
 		collection.findOne({_id: new mongodb.ObjectID(objId)}, (err, obj) => {
 			if (err) {
 				cl('Cannot get you that ', err)
@@ -201,8 +199,6 @@ app.put('/data/:objType/:id', function (req, res) {
 // Basic Login/Logout/Protected assets
 app.post('/login/:objType', function (req, res) {
     dbConnect().then((db) => {
-		console.log(db.collection('user'))
-		console.log('req.body', req.body)
         db.collection('user').findOne({ username: req.body.username, pass: req.body.pass }, function (err, user) {
 			cl('user', user);            
 			if (user) {
@@ -214,7 +210,6 @@ app.post('/login/:objType', function (req, res) {
                 req.session.user = null;
                 res.end('Login NOT Succesful');
             }
-			cl('req.session.user', req.session.user);
         });
     });
 });

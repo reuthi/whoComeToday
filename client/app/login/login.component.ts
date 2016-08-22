@@ -6,7 +6,7 @@ import { LoginService } from './login.service'
 @Component({
     moduleId: module.id,
     directives: [REACTIVE_FORM_DIRECTIVES],
-    selector: 'login-component',
+    // selector: 'login-component',
     template: `
     <section class="loginCopmonent">
         <h3>Login</h3>
